@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Introduction</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav>
+            <div
+                class="nav-container">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="/">
+                    <img src="../assets/images/logo.svg" alt="logo" width="60px">
+                </a>
+                </div>
+                <!-- Nav-menu -->
+                <div class="nav-menu">
+                    <div class="nav-item">
+                        <a href="/index.html">Home</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="http://">Explore</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="/">Lorem</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="/">Lorem</a>
+                    </div>
+                </div>
+                <!-- Call to action -->
+                <div class="button">
+                    <!-- <button>Signup</button> -->
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div class="page-wrapper">
+            <div class="left-container">
+                <h1>Collection Framework</h1>
+                <p>The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+                    
+                                        Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, manipulation, and deletion.
+                                        
+                                        Java Collection means a single unit of objects. Java Collection framework provides many interfaces (Set, List, Queue, Deque) and classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).</p>
+                <h2 id="CollectionInterface">Collection Interface</h2>
+                <p>The Collection interface is the interface which is implemented by all the classes in the collection framework. It declares the methods that every collection will have. In other words, we can say that the Collection interface builds the foundation on which the collection framework depends.
+                    
+                                        Some of the methods of Collection interface are Boolean add ( Object obj), Boolean addAll ( Collection c), void clear(), etc. which are implemented by all the subclasses of Collection interface.</p>
+                <h2>List Interface</h2>
+                <p>List interface is the child interface of Collection interface. It inhibits a list type data structure in which we can store the ordered collection of objects. It can have duplicate values.
+                    
+                                            List interface is implemented by the classes ArrayList, LinkedList, Vector, and Stack.</p>
+
+                <h2>ArrayList</h2>
+                <p>The ArrayList class implements the List interface. It uses a dynamic array to store the duplicate element of different data types. The ArrayList class maintains the insertion order and is non-synchronized. The elements stored in the ArrayList class can be randomly accessed. Consider the following example.</p>
+                
+                <h2>LinkedList</h2>
+                <p>LinkedList implements the Collection interface. It uses a doubly linked list internally to store the elements. It can store the duplicate elements. It maintains the insertion order and is not synchronized. In LinkedList, the manipulation is fast because no shifting is required.</p>
+                <h2>Vector</h2>
+                <p>Vector uses a dynamic array to store the data elements. It is similar to ArrayList. However, It is synchronized and contains many methods that are not the part of Collection framework.</p>
+                <h2>Stack</h2>
+                <p>The stack is the subclass of Vector. It implements the last-in-first-out data structure, i.e., Stack. The stack contains all of the methods of Vector class and also provides its methods like boolean push(), boolean peek(), boolean push(object o), which defines its properties.</p>
+                <h2>Queue Interface</h2>
+                <p>Queue interface maintains the first-in-first-out order. It can be defined as an ordered list that is used to hold the elements which are about to be processed. There are various classes like PriorityQueue, Deque, and ArrayDeque which implements the Queue interface.</p>
+            
+            </div>
+            <div class="right-container">
+                <div class="topic-navigation">
+                    <ul>
+                        <li>
+                            <div onclick="toggleSubtopics(1)" class="topic">
+                                Introduction
+                                <i id="1" class="fas fa-caret-down"></i>
+                            </div>
+                            <div id="myDropdown1" class="sub-topics">
+                                <a  href="#CollectionInterface">Collection Interface</a>
+                                <a href="">List Interface</a>
+                                <a href="">Array List</a>
+                                <a href="">Linked List</a>
+                                <a href="">Vector</a>
+                                <a href="">Stack</a>
+                                <a href="">Queue Interface</a>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div onclick="toggleSubtopics(2)" class="topic">
+                                Java LinkedList
+                                <i id="2" class="fas fa-caret-down"></i>
+                            </div>
+
+                            <div id="myDropdown2" class="sub-topics">
+                                <a href="">Topic 1</a>
+                                <a href="">Topic 1</a>
+                                <a href="">Topic 1</a>
+                                <a href="">Topic 1</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            function toggleSubtopics(x) {
+                document.getElementById("myDropdown" + x).classList.toggle("show");
+                document.getElementById(x).classList.toggle("fa-caret-up");
+            }
+        </script>
+    </body>
+</html>

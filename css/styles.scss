@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+// Color variable declaration
+$primary: #00c9d3;
+$background: #20232a;
+$warn: #dfa612;
+
+// Global selector
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-smooth: auto;
+}
+// Navbar CSS
+nav{
+    position: fixed;
+    top: 0;
+    background-color:  rgba(2, 28, 53, 0.7);
+    width: 100%;
+    backdrop-filter: blur(5px);
+    font-size: 18px;
+    font-weight: 300;
+    z-index: 1000;
+    
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 5%;
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        size: 2px;
+    }
+    
+}
+.nav-menu{
+    display: flex;
+    @media screen and (max-width: 760px){
+        display: none;
+    }
+}
+
+.nav-item a{
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    &:hover{
+        color: red;
+    }
+    
+}
+
+
+section{
+    padding: 0px 5%;
+    h1{
+        color: #20232a;
+        font-size: 2.2rem;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+//Hero Section
+.hero-container{
+    position: relative;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    color: #fff;
+    font-weight: 300;
+    
+    @media screen and (max-width: 760px){
+        height: 100vh;
+    }
+    .value-prop{
+        text-align:center;
+        padding: 50px;
+        margin-bottom: 70px;
+        background-color: rgba(0,0,0,0.4);
+        backdrop-filter: blur(5px);
+    }
+    h1 {
+        font-size: 3rem;
+        color: #{$primary};
+    }
+    p {
+        font-size: 1.5rem;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    
+}
+
+.card-wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  gap: 2rem;
+  margin: 0 1vw;
+  padding-bottom: 100px;
+  list-style-type: none;
+}
+.card{
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: 1px 0px 10px 1px #ccccd3;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:hover{
+        transform: scale(1.1);
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    h2{
+        padding: 1rem 0;
+    }
+    .card-img{
+        width:100%;
+        // height: 300px;
+    }
+}
+#myVideo {
+    position: absolute;
+    top: -70px;
+    bottom: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%; 
+    height: 100%;
+    z-index: -1000;
+  }
+
+  /* Pages Styles */
+
+.page-wrapper{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    
+    .left-container{
+        width: 70%;
+        padding: 5% 10% 5% 10%;
+        h1, h2{
+            padding: 4rem 0 1rem 0;
+        }
+        
+        p{
+            font-size: 18px;
+            line-height: 1.8rem;
+        }
+    }
+    .right-container{
+        width: 30%;
+        min-height: 100%;
+        max-height: auto;
+        background-color:#F7F7F7;
+        position: fixed;
+        right: 0;
+        .topic-navigation{
+            display: flex;
+            padding: 20%  20% 20%;
+            min-height: inherit;
+            max-height: inherit;
+            // &:hover{
+            //     color: black;
+            // }
+            ul{
+                list-style-type: none;
+            }
+            li{
+                padding: 1rem 0;
+                
+            }
+            li a{
+                text-decoration: none;
+                padding: 0.3rem 0 0.3rem 0.5rem;
+                color: #000;
+            }
+            li a:hover{
+                color: red;
+                
+            }
+        }
+        .topic{
+            cursor:pointer;
+            font-size: 19px;
+        }
+        .sub-topics{
+            display: none;
+            padding: 1rem 0;
+        
+    
+            a{
+                display: block;
+                
+            }
+        }
+        .show{
+            display: block;
+        }
+    }
+  }
+
+  .fas{
+      padding-left: 10px;
+  }
